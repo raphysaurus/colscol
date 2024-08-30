@@ -57,7 +57,6 @@ async def inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         results.append(result)
     await update.inline_query.answer(results)
 
-
 async def dispatch_updates(context: ContextTypes.DEFAULT_TYPE) -> None:
     ''' sends the updates their dedicated tg-channel '''
     keyboard = [[InlineKeyboardButton("Oh! Interesting!", callback_data="1")]]
